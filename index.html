@@ -20,6 +20,7 @@
     <header class="main-header">
         <div class="container">
             <div class="logo">
+                <img src="assets/logo.png" alt="中囵新能源" class="logo-image">
                 <h1>中囵新能源</h1>
             </div>
             <nav class="main-nav">
@@ -41,8 +42,20 @@
     </header>
 
     <!-- 悬浮咨询按钮 -->
-    <div class="floating-btn pulse">
-        <span>加盟咨询</span>
+    <div class="floating-btn pulse" id="wechat-btn">
+        <span>添加客服微信</span>
+    </div>
+
+    <!-- 微信二维码弹窗 -->
+    <div class="wechat-container" id="wechat-container">
+        <div class="wechat-popup">
+            <span class="close-wechat" id="close-wechat">&times;</span>
+            <h3>微信客服</h3>
+            <div class="qrcode-container">
+                <img src="assets/kefu.png" alt="微信客服二维码">
+                <p>扫码添加客服微信咨询</p>
+            </div>
+        </div>
     </div>
 
     <!-- 公司简介 -->
@@ -58,8 +71,9 @@
                     <img src="assets/company-intro.jpg" alt="中囵新能源">
                 </div>
                 <div class="about-text" data-aos="fade-left">
-                    <p class="about-highlight">中囵新能源——中国领先的能源综合服务商，成立于2014年，十年深耕油品流通领域与新能源服务双赛道。</p>
-                    <p>凭借"尽职敬业、团结奉献、求实创新、开放超越"的企业精神，励精图治，中囵能源品牌取得了骄人的业绩。2023年中囵新能源率先创新提出"充电桩综合服务站"商业模式，开启能源终端场景革命。</p>
+                    <p class="about-highlight">中囵新能源——中国领先的能源综合服务商</p>
+                    <p>自2014年成立以来，十年深耕油品流通领域与新能源服务双赛道，凭借"尽职敬业、团结奉献、求实创新、开放超越"的企业精神，励精图治，中囵能源品牌取得了骄人的业绩。</p>    
+                    <p>2023年，中囵新能源率先创新提出"充电桩综合服务站"商业模式，开启能源终端场景革命。</p>
                     <div class="about-feature">
                         <div class="feature-item">
                             <div class="feature-icon">
@@ -79,15 +93,7 @@
                                 <p>千家油站赋能计划全面启动</p>
                             </div>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h3>绿色低碳能源先驱</h3>
-                                <p>助力国家碳达峰碳中和目标</p>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -125,7 +131,7 @@
             </div>
             <div class="video-placeholder">
                 <!-- 预留视频嵌入位置 -->
-                <div class="video-thumbnail">
+                <div class="video-thumbnail" id="video-container">
                     <img src="assets/video-thumbnail.jpg" alt="宣传片缩略图">
                     <div class="play-btn">
                         <i class="fas fa-play"></i>
@@ -201,10 +207,8 @@
                     <div class="timeline-content" data-aos="fade-right">
                         <div class="timeline-year">2014</div>
                         <h3>品牌诞生</h3>
-                        <p>中囵品牌诞生，与大型炼油厂、国有大型油库，油品运输物流公司等战略合作，集采进油，降低成本。</p>
-                        <div class="milestone-image">
-                            <img src="assets/milestone-2014.jpg" alt="品牌诞生">
-                        </div>
+                        <p>中囵品牌诞生，同时大型炼油厂、国有大型油库，油品运输物流公司等均与中囵达成战略合作，
+                            通过规模化集采进油，降低加油站运营成本。</p>        
                     </div>
                 </div>
                 
@@ -213,10 +217,8 @@
                     <div class="timeline-content" data-aos="fade-left">
                         <div class="timeline-year">2023</div>
                         <h3>商业模式创新</h3>
-                        <p>为快速发展的全国加盟商深度服务，独创"<span class="highlight">装修设计+智慧系统+培训指导</span>"，实现加油站标准化升级。</p>
-                        <div class="milestone-image">
-                            <img src="assets/milestone-2023.jpg" alt="商业模式创新">
-                        </div>
+                        <p>为快速发展全国加盟商网络，深度服务加盟商，独创"<span class="highlight">装修设计+智慧系统+培训指导</span>"，实现加油站标准化升级。</p>
+                        
                     </div>
                 </div>
                 
@@ -225,10 +227,8 @@
                     <div class="timeline-content" data-aos="fade-right">
                         <div class="timeline-year">2024</div>
                         <h3>战略升级</h3>
-                        <p>启动战略转型升级，首座标杆项目——《<span class="highlight">光储充检一体站</span>》正式启动，开启能源服务新篇章。</p>
-                        <div class="milestone-image">
-                            <img src="assets/milestone-2024.jpg" alt="战略升级">
-                        </div>
+                        <p>启动战略转型升级，首座标杆项目——《<span class="highlight">光储充检一体站</span>》鲤南站正式启动，开启能源服务新篇章。</p>
+                        
                     </div>
                 </div>
             </div>
@@ -246,7 +246,7 @@
             <div class="business-showcase">
                 <div class="showcase-item">
                     <div class="showcase-image">
-                        <img src="assets/business-1.jpg" alt="光储充检一体站">
+                        <img src="assets/milestone-2015.jpg" alt="光储充检一体站">
                     </div>
                     <div class="showcase-content">
                         <div class="showcase-icon"><i class="fas fa-solar-panel"></i></div>
@@ -274,23 +274,12 @@
                     </div>
                     <div class="showcase-content">
                         <div class="showcase-icon"><i class="fas fa-charging-station"></i></div>
-                        <h3>油电综合服务站</h3>
-                        <p>油品销售与电动车充电相结合的转型服务站，满足能源过渡期的多元化需求。</p>
-                        <a href="#" class="btn showcase-btn">了解详情</a>
-                    </div>
-                </div>
-                
-                <div class="showcase-item reverse">
-                    <div class="showcase-image">
-                        <img src="assets/business-4.jpg" alt="文旅服务生态圈">
-                    </div>
-                    <div class="showcase-content">
-                        <div class="showcase-icon"><i class="fas fa-umbrella-beach"></i></div>
                         <h3>文旅服务生态圈</h3>
                         <p>能源服务与休闲旅游相结合，打造集餐饮、休闲、购物、体验为一体的综合服务生态。</p>
                         <a href="#" class="btn showcase-btn">了解详情</a>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -310,8 +299,8 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="info-content">
-                            <h3>总部地址</h3>
-                            <p>北京市朝阳区建设路88号商务中心</p>
+                            <h3>办公地址</h3>
+                            <p>仙游县郊尾镇沙溪工业园8号</p>
                         </div>
                     </div>
                     
@@ -320,8 +309,8 @@
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div class="info-content">
-                            <h3>联系电话</h3>
-                            <p>400-888-7777</p>
+                            <h3>会所地址</h3>
+                            <p>仙游县学府东路666号风雅会</p>
                         </div>
                     </div>
                     
@@ -331,7 +320,7 @@
                         </div>
                         <div class="info-content">
                             <h3>电子邮箱</h3>
-                            <p>contact@zhongleienergy.com</p>
+                            <p>guo3110@126.com</p>
                         </div>
                     </div>
                     
@@ -344,34 +333,22 @@
                             <p>周一至周五 9:00-18:00</p>
                         </div>
                     </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>加盟咨询</h3>
-                    <form id="inquiry-form">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="您的姓名" required>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fab fa-weixin"></i>
                         </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" placeholder="联系电话" required>
+                        <div class="info-content">
+                            <h3>
+                            
+                            <!-- 添加微信客服按钮 -->
+                            <a href="weixin://dl/chat?yjzq3110" class="wechat-btn">
+                                
+                                <span>微信联系客服</span>
+                            </a>
+                        </h3>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="电子邮箱" required>
-                        </div>
-                        <div class="form-group">
-                            <select id="inquiry-type">
-                                <option value="">咨询类型</option>
-                                <option value="franchise">加盟合作</option>
-                                <option value="upgrade">站点升级</option>
-                                <option value="investment">投资合作</option>
-                                <option value="other">其他咨询</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" placeholder="您的咨询内容" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn submit-btn">提交咨询</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -411,8 +388,8 @@
                         <div class="social-links">
                             <a href="#"><i class="fab fa-weixin"></i></a>
                             <a href="#"><i class="fab fa-weibo"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-bilibili"></i></a>
+                           
+                            
                         </div>
                         <div class="qr-code">
                             <img src="assets/qrcode.jpg" alt="官方微信">
@@ -422,7 +399,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 中囵新能源科技有限公司 版权所有</p>
+                <p>&copy; 2025 中囵新能源科技有限公司 版权所有</p>
                 <p>ICP备案号：京ICP备12345678号</p>
             </div>
         </div>
@@ -616,16 +593,47 @@
 
             // 视频播放按钮
             document.querySelector('.play-btn').addEventListener('click', function() {
-                alert('视频播放功能待实现');
-                // 这里可以添加实际的视频播放代码
-                // 比如替换缩略图为iframe嵌入视频
+                const videoContainer = document.getElementById('video-container');
+                videoContainer.innerHTML = `
+                    <video id="promo-video" controls autoplay style="width:100%; height:100%; position:absolute; top:0; left:0;">
+                        <source src="assets/论坛峰会.mp4" type="video/mp4">
+                        您的浏览器不支持HTML5视频播放。
+                    </video>
+                `;
             });
 
-            // 表单提交
-            document.getElementById('inquiry-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('表单提交功能待实现');
-                // 实际项目中可以添加AJAX提交表单数据的代码
+            // 微信二维码弹窗
+            const wechatBtn = document.getElementById('wechat-btn');
+            const contactWechatBtn = document.getElementById('contact-wechat-btn');
+            const wechatContainer = document.getElementById('wechat-container');
+            const closeWechat = document.getElementById('close-wechat');
+
+            // 显示微信二维码
+            function showWechatQR() {
+                wechatContainer.classList.add('active');
+            }
+
+            // 关闭微信二维码
+            function closeWechatQR() {
+                wechatContainer.classList.remove('active');
+            }
+
+            // 悬浮按钮点击事件
+            wechatBtn.addEventListener('click', showWechatQR);
+            
+            // 联系页面微信按钮点击事件
+            if(contactWechatBtn) {
+                contactWechatBtn.addEventListener('click', showWechatQR);
+            }
+            
+            // 关闭按钮点击事件
+            closeWechat.addEventListener('click', closeWechatQR);
+            
+            // 点击弹窗外部关闭
+            wechatContainer.addEventListener('click', function(e) {
+                if(e.target === wechatContainer) {
+                    closeWechatQR();
+                }
             });
         });
     </script>
